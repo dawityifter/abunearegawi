@@ -8,10 +8,10 @@
 ******************************************************************************/
 
 // Database connection constants
-$sSERVERNAME = 'localhost';
-$sUSER = 'root';
-$sPASSWORD = 'root';
-$sDATABASE = 'churchinfo';
+$sSERVERNAME = 'localhost';//fdb3.biz.nf';//
+$sUSER = 'root';//1142346_aregawi';//
+$sPASSWORD = 'root'; //'AbuneAregawi24';//
+$sDATABASE = 'churchinfo';//'1142346_aregawi';//
 
 // Root path of your ChurchInfo installation ( THIS MUST BE SET CORRECTLY! )
 // For example, if you will be accessing from http://www.yourdomain.com/web/churchinfo

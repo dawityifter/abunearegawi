@@ -19,23 +19,7 @@ Facebook id : abuneteklehaymanotwaa.eotcdallas-->
   <div id="contentbg">
     <div id="contenttxtblank">
       <div id="menu">
-        <ul>
-          <li><a href="index.html" class="menu">ቅድመ ገጽ</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">ቤተክርስቲያናችን </a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu"> የሰንበት ት/ቤት</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">ስብከት</a></li>
-          <li class="menusap"></li>
-          <li><a href="photosAndVideos.html" class="menu">ፎቶዎቸ አና ቪዲዮ</a></li>
-          <li class="menusap"></li>
-          <li><a href="maps.html" class="menu">አድራሻችን</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu"> Testimonials</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">Contact Us</a></li>
-        </ul>
+         <?php include 'menu.php'; ?>
       </div>
       <div id="contentleft">
         <div id="topbuttonsblank">
@@ -79,6 +63,7 @@ Facebook id : abuneteklehaymanotwaa.eotcdallas-->
 						{ id: 't3tw76_7Nuk', title: 'New Church Building' },
 						{ id: 'NP4s-7IKFfI', title: 'መስከረም ፳፻፬ ጉባኤ' },
 						{ id: 'SXRs_4uI-vo', title: 'የስቅለት በዓል (I)2011' },
+                                                { id:  ''}
 						{ id: 'bgw-DkTm_-U', title: 'የስቅለት በዓል (II)2011' }
 					]
 				}

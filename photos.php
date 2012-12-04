@@ -47,9 +47,9 @@
                     link: 'http://domain.com'
                 },
                 {
-                    image: 'images/aba-6.jpg',
-                    thumb: 'images/aba-6.jpg',
-                    big: 'images/aba-6.jpg',
+                    image: 'images/aba-1.jpg',
+                    thumb: 'images/aba-1.jpg',
+                    big: 'images/aba-1.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
                     link: 'http://domain.com'
@@ -123,23 +123,7 @@
             <div id="contentbg">
                 <div id="contenttxtblank">
                     <div id="menu">
-                            <ul>
-                                <li><a href="#" class="menu">ቅድመ ገጽ</a></li>
-                                <li class="menusap"></li>
-                                    <li><a href="#" class="menu">ቤተክርስቲያናችን </a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu"> የሰንበት ት/ቤት</a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu">ስብከት</a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu">ፎቶዎቸ አና ቪዲዮ</a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu">አድራሻችን</a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu"> Testimonials</a></li>
-                                    <li class="menusap"></li>
-                                    <li><a href="#" class="menu">Contact Us</a></li>
-                                </ul>
+                          <?php include 'menu.php'; ?>
                             </div>
                             <div id="contentleft">
                                 <div id="topbuttonsblank">

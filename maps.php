@@ -15,23 +15,7 @@
   <div id="contentbg">
     <div id="contenttxtblankmap">
       <div id="menu">
-        <ul>
-          <li><a href="index.html" class="menu">ቅድመ ገጽ</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">ቤተክርስቲያናችን </a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu"> የሰንበት ት/ቤት</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">ስብከት</a></li>
-          <li class="menusap"></li>
-          <li><a href="photosAndVideos.html" class="menu">ፎቶዎቸ አና ቪዲዮ</a></li>
-          <li class="menusap"></li>
-          <li><a href="maps.html" class="menu">አድራሻችን</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu"> Testimonials</a></li>
-          <li class="menusap"></li>
-          <li><a href="#" class="menu">Contact Us</a></li>
-        </ul>
+         <?php include 'menu.php'; ?>
       </div>
       <div id="contentleftmap">
         <div id="topbuttonsblank">

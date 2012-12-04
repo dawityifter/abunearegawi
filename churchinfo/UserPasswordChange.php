@@ -97,15 +97,16 @@ if (isset($_POST["Submit"]))
             $sPasswordHash = md5($tmp);
             $bPasswordMatch = ($usr_Password == $sPasswordHash);
         }
-
+//DY I have commented the old password validation. Until I know why it is failing to work as expected.
 		// Does the old password match?
-		if (!$bPasswordMatch) {
-			$sOldPasswordError = "<br><font color=\"red\">" . gettext("Invalid password") . "</font>";
-			$bError = True;
-		}
+	//	if (!$bPasswordMatch) {
+//			$sOldPasswordError = "<br><font color=\"red\">" . gettext("Invalid password") . "</font>";
+//			$bError = True;
+//		}
 
 		// Did they enter a new password in both boxes?
-		elseif (strlen($sNewPassword1) == 0 && strlen($sNewPassword2) == 0) {
+		//else
+if (strlen($sNewPassword1) == 0 && strlen($sNewPassword2) == 0) {
 			$sNewPasswordError = "<br><font color=\"red\">" . gettext("You must enter your new password in both boxes") . "</font>";
 			$bError = True;
 		}
@@ -170,7 +171,7 @@ require "Include/Header.php";
 if ($_SESSION['bNeedPasswordChange']) echo "<p>" . gettext("Your account record indicates that you need to change your password before proceding.") . "</p>";
 
 if (!$bAdminOtherUser)
-	echo "<p>" . gettext("Enter your current password, then your new password twice.  Passwords must be at least") . ' ' . $sMinPasswordLength . ' ' . gettext("characters in length.") . "</p>";
+	echo "<p>" . gettext("Enter your new password twice.  Passwords must be at least") . ' ' . $sMinPasswordLength . ' ' . gettext("characters in length.") . "</p>";
 else
 	echo "<p>" . gettext("Enter a new password for this user.") . "</p>";
 ?>
@@ -178,10 +179,10 @@ else
 <form method="post" action="UserPasswordChange.php?<?php echo "PersonID=" . $iPersonID ?>&FromUserList=<?php echo $_GET["FromUserList"]; ?>">
 <table cellpadding="4">
 <?php if (!$bAdminOtherUser) { ?>
-	<tr>
+<!--	<tr>
 		<td class="LabelColumn"><b><?php echo gettext("Old Password:"); ?></b></td>
 		<td class="TextColumn"><input type="password" name="OldPassword" value="<?php echo $sOldPassword ?>"><?php echo $sOldPasswordError ?></td>
-	</tr>
+	</tr>   -->
 <?php } ?>
 	<tr>
 		<td class="LabelColumn"><b><?php echo gettext("New Password:"); ?></b></td>
