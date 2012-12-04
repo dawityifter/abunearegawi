@@ -77,9 +77,10 @@
                             <h2>ቤተ ክርስቲያናችን</h2>
                         </div>
                         <div id="lefttxtblank">
-                            <div id="lefttxt"><span class="leftboldtxt">Rome wasn't built in one day neither is our church.</span> Sed tincidunt lacus at dolor. Mauris ullamcorper pulvinar quam. Class aptent taciti socid litora torquent . <br />
-                                Etiam erat mauris, accumsan id, blandit nec, commodo non, quam. <span class="lefttxt02">Phasellus gravida </span>vehicula massa. Suspende lacinia purus at nisi. Donec dictum hendrerit turpis. Phasellus lobortis odio in lacus. <span class="lefttxt">Etiam vitae elit.</span> Nam et purusit amet odio ultrices tincidunt. Nam gravida augue vel purus. Sed hendrerit lectus ac libero.</div>
-                            <div id="buttonbg"><a href="#" class="more">readmore</a></div>
+                            <div id="lefttxt"><span class="leftboldtxt">You may not seem to have the necessary Ethiopic fonts installed in your machine.</span>  In order to view Ethiopic fonts, you only need a unicode Ethiopic font in your computer's font folder.
+                                In Windows systems, this folder is normally  <span class="lefttxt02">C:\Windows\Fonts. </span>On Macintosh computers, you need only drag and drop the font onto the closed System folder. (The system will automatically sort it into the correct subfolder.)<span class="lefttxt">Once the font is installed, </span> you may need to restart your web browser in order to make it recognize the newly installed fonts.
+</div>
+                            <div id="buttonbg"><a href="downloadfonts.php" class="more">readmore</a></div>
                         </div>
                     </div>
                     <div id="contentright">
