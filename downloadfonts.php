@@ -21,7 +21,7 @@
             <div id="contentbg" style="height:900px;">
                 <div id="contenttxtblankmap">
                     <div id="menu">
-                        <?php include 'menu.php'; ?>
+                        <?php include 'menu_en.php'; ?>
                     </div>
                     <div id="contentleftmap">
                         <div id="topbuttonsblank">

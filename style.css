@@ -115,6 +115,19 @@ h1,h2,h3,h4,h5,h6,span
 		background-position:center bottom;
 	}
 /*------------------------------------------------------MENU---------------------------------------------END--------------------------------------------------------------------------------*/	
+.code_pre {
+    clear: both;
+    color: #00000;
+    font-weight: normal;
+    overflow: auto;
+    padding: 5px;
+    text-decoration: none;
+    white-space: pre;
+font-size:13px;
+}
+
+
+
 #contentleft
 	{
 		width:597px;
@@ -1168,7 +1181,7 @@ h1,h2,h3,h4,h5,h6,span
         width: 240px;  
         height: 150px;  
         position: absolute;  
-        rightright: 150px;  
+        right: 150px;  
         top: 110px;  
         background: #46392f;  
         text-align: left;  
@@ -1181,7 +1194,7 @@ h1,h2,h3,h4,h5,h6,span
     }  
     div#login input#password {  
         position: relative;  
-        rightright: -6px;  
+        right: -6px;  
     }  
     div#login input#login_btn {  
         border: 1px #899690 solid;  

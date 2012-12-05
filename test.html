@@ -10,68 +10,34 @@
 
 
 <link rel="icon" href="images/icon.ico" /> 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-	<script type="text/javascript" src="js/jquery.youtube.player.js"></script>
+ <script type="text/javascript" src="js/font.js"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+ 
+        <script type="text/javascript">
+            // Usage
+window.onload = function() {
+    var knownEthiopicFonts=new Array("Ethiopia Jiret","Ethiopic WashRa Bold","Ethiopic Wookianos",
+"Ethiopic Yebse", "Visual Geez Unicode");  //For some reason, this always return true "Ge'ez 1",
+   var detective = new Detector();
+    var ethiopicSize = knownEthiopicFonts.length;
+    var found = false;
+    for(var i=0; i < ethiopicSize; i++){
+     if(detective.detect(knownEthiopicFonts[i])){
+         found = true;
+         break;
+     }   
+    }
+    if(!found){
+        window.location ="index_en.php";
+    }
+    alert('yes');
+};
 
+ </script>             
 </head>
  
 <body class="basic">
     
-    <div id="lefttxtblank">
-          <div id="centered" >
-		<div class="youtube-player">
-			<div class="youtube-player-video">
-				<div class="youtube-player-object">
-					You need Flash player 8+ and JavaScript enabled to view this video.
-				</div>
-
-			</div>
-		</div>
-
-		<div class="custom-playlist">
-
-		</div>
-	</div>
-<script type="text/javascript">	
-//<![CDATA[
-
-		(function($){
-			var config =  {
-
-				repeatPlaylist: 1,
-
-				// Custom playlist
-				playlist: {
-					title: 'Random videos',
-					videos: [
-						{ id: 'wDowSzVgjXI', title: 'The All Seeing I - Beat Goes On HQ' },
-						{ id: 'hPzNl6NKAG0', title: 'Maru the cat' },
-						{ id: 'lvpuT3aoypE', title: 'All Online Data Lost After Internet Crash' },
-						{ id: 'Kv6Ewqx3PMs', title: 'Mr. Oizo Flat Beat' },
-						{ id: 'IAxj2ob_JoU', title: 'Most incredible volcano footage ever' },
-						{ id: '3ycBGkLkEkg', title: 'Wingsuit BASE jumping in Baffin Island' }
-					]
-				}
-
-				/*
-				// Youtube playlist
-				playlist: {
-					playlist: '71B8152559FA2805'
-				}
-
-				// Latest user videos
-				playlist: {
-					user: 'TheSensless'
-				}
-				*/
-			};
-
-			$('.youtube-player').player(config)
-
-		})(this.jQuery);
-	//]]>
-	</script>
-        </div>
+   fadfsdfasd fsd f
 </body>
 </html>

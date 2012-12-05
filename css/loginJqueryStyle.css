@@ -28,7 +28,7 @@ hr#login_header_stripe {
 	height: 54px;
 	background: url(images/panel_button.png);
 	z-index: 20;
-	filter:alpha(opacity=70);
+	filter:alpha(opacity=70);  /* For IE8 and earlier */
 	-moz-opacity:0.70;
 	-khtml-opacity: 0.70;
 	opacity: 0.70;
@@ -79,7 +79,7 @@ hr#login_header_stripe {
 }
 #login_panel_contents {
 	background: black;
-	filter:alpha(opacity=70);
+	filter:alpha(opacity=70);  
 	-moz-opacity:0.70;
 	-khtml-opacity: 0.70;
 	opacity: 0.70;

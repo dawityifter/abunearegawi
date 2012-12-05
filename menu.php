@@ -5,7 +5,7 @@ echo '<ul>
                             <li class="menusap"></li>
                             <li><a href="#" class="menu">ቤተክርስቲያናችን </a></li>
                             <li class="menusap"></li>
-                            <li><a href="#" class="menu"> የሰንበት ት/ቤት</a></li>
+                            <li><a href="#" class="menu">የሰንበት ት/ቤት</a></li>
                             <li class="menusap"></li>
                             <li><a href="docs/mistreSelassie.htm" class="menu">ስብከት</a></li>
 
