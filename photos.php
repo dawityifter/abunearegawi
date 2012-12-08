@@ -8,7 +8,7 @@
             var data = [
                 {
                     image: 'images/aba-1.jpg',
-                    thumb: 'images/aba-1.jpg',
+                    thumb: 'images/aba-1-Thumb.jpg',
                     big: 'images/aba-1.jpg',
                     title: 'Our Priest',
                     description: 'Kesis Tadesse',
@@ -16,7 +16,7 @@
                 },
                 {
                     image: 'images/aba-2.jpg',
-                    thumb: 'images/aba-2.jpg',
+                    thumb: 'images/aba-2-Thumb.jpg',
                     big: 'images/aba-2.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
@@ -24,7 +24,7 @@
                 },
                 {
                     image: 'images/aba-3.jpg',
-                    thumb: 'images/aba-3.jpg',
+                    thumb: 'images/aba-3-Thumb.jpg',
                     big: 'images/aba-3.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
@@ -32,7 +32,7 @@
                 },
                 {
                     image: 'images/aba-4.jpg',
-                    thumb: 'images/aba-4.jpg',
+                    thumb: 'images/aba-4-Thumb.jpg',
                     big: 'images/aba-4.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
@@ -40,16 +40,16 @@
                 },
                 {
                     image: 'images/aba-5.jpg',
-                    thumb: 'images/aba-5.jpg',
+                    thumb: 'images/aba-5-Thumb.jpg',
                     big: 'images/aba-5.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
                     link: 'http://domain.com'
                 },
                 {
-                    image: 'images/aba-1.jpg',
-                    thumb: 'images/aba-1.jpg',
-                    big: 'images/aba-1.jpg',
+                    image: 'images/aba-6.jpg',
+                    thumb: 'images/aba-6-Thumb.jpg',
+                    big: 'images/aba-6.jpg',
                     title: 'my first image',
                     description: 'Aba asdfsd asdfasdfa dfasdfasdfasdf',
                     link: 'http://domain.com'
@@ -159,13 +159,9 @@
                                 
                             </div>
                         </div>
-                        <div id="footerbg">
-                            <div id="footerlinks"><a href="#" class="footerlinks">Home</a> | <a href="#" class="footerlinks">About Us</a> | <a href="#" class="footerlinks">Solutions</a> | <a href="#" class="footerlinks">Services</a> |<a href="#" class="footerlinks"> Blog</a> | <a href="#" class="footerlinks">Our Client</a> | <a href="#" class="footerlinks">Sponsors Link</a> | <a href="#" class="footerlinks">Testimonials</a> | <a href="#" class="footerlinks">Contact Us</a></div>
-                            <div id="copyrights">© Copyright Information Goes Here. All Rights Reserved.</div>
-                            <div id="designedby">Designed by <a href="http://www.templateworld.com" class="designedby">TemplateWorld </a>and brought to you by <a href="http://www.smashingmagazine.com" class="designedby">SmashingMagazine</a></div>
-                            <div id="validation"><a href="http://validator.w3.org/check?uri=referer" class="xhtml">xhtml valid</a><a href="http://jigsaw.w3.org/css-validator/check/referer" class="css">css valid</a></div>
-                        </div>
+                      
                     </div>
+             <?php include 'footer.php'; ?>
             </div>
             </body>
         </html>
