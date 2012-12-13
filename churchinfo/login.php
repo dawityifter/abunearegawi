@@ -314,16 +314,21 @@ ob_start();
 ?>
 <html>
     <head>
-        <meta name="GENERATOR" content="Evrsoft First Page">
-<style type="text/css">
+        <meta name="GENERATOR" content="Abune Aregawi">
+        
+
+      <link rel="stylesheet" type="text/css" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css">
+
+     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/start/jquery-ui.css">
+
+  <style type="text/css">
 @import url(../style.css);
 </style>
         <title>Abune Tekle Hymanot we Abune Aregawi EOTC</title>
         <meta name="description" content="" />
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js" type="text/javascript"></script> 
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/base/jquery-ui.css" type="text/css" media="all" /> 
-        <script>
+       <script type="text/javascript">
             jQuery(function($){
                 // simple jQuery validation script
                 $('#login').submit(function(){
@@ -345,18 +350,20 @@ ob_start();
                     });
                     return valid;
                 });
-            })
-        </script>
-        <script>
-            
+            });
+        
             $("#PasswordError").html("<p class='error'>Invalid username and/or password.</p>"); 
             $(function() {
                 // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
                 $( "#dialog:ui-dialog" ).dialog( "destroy" );
-                var name = $( "#name" ),
-                email = $( "#email" ),
-                password = $( "#password" ),
-                allFields = $( [] ).add( name ).add( email ).add( password ),
+               
+               var fname = $("#fname"),
+               lname = $("#lname"),
+               email = $("#email"),
+               isMember = $("#isMember"),
+               emailList = $('#emaillist'),
+               allFields = $( [] ).add( fname ).add( lname ).add( email ).add( isMember ).add(emailList),
+              
                 tips = $( ".validateTips" );
                 function updateTips( t ) {
                     tips
@@ -390,31 +397,44 @@ ob_start();
 
                 }
 
-                $( "#dialog-form" ).dialog({
+                $( "#RegisterDialog" ).dialog({
                     autoOpen: false,
-                    height: 400,
-                    width: 350,
+                    height: 500,
+                    width: 500,
                     modal: true,
                     buttons: {
-                        "Create an account": function() {
+                        "Apply": function() {
                             var bValid = true;
                             allFields.removeClass( "ui-state-error" );
-                            bValid = bValid && checkLength( name, "username", 3, 16 );
+                            bValid = bValid && checkLength( fname, "First Name", 3, 16 );
+                            bValid = bValid && checkLength( lname, "Last Name", 3, 16 );
                             bValid = bValid && checkLength( email, "email", 6, 80 );
-                            bValid = bValid && checkLength( password, "password", 5, 16 );
-                            bValid = bValid && checkRegexp( name, /^[a-z]([0-9a-z_])+$/i, "Username may consist of a-z, 0-9, underscores, begin with a letter." );
+                            bValid = bValid && checkRegexp( fname, /^[a-z]([a-z])+$/i, "First Name may consist of only letters." );
+                            bValid = bValid && checkRegexp( lname, /^[a-z]([a-z])+$/i, "Last Name may consist of only letters." );
+                            
                             // From jquery.validate.js (by joern), contributed by Scott Gonzalez: http://projects.scottsplayground.com/email_address_validation/
                             bValid = bValid && checkRegexp( email, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
-                           bValid = bValid && checkRegexp( password, /^([0-9a-zA-Z])+$/, "Password field only allow : a-z 0-9" );
-                          if ( bValid ) {
-                               $( "#users tbody" ).append( "<tr>" +
-                                   "<td>" + name.val() + "</td>" + 
-                                  "<td>" + email.val() + "</td>" + 
-                                  "<td>" + password.val() + "</td>" +
-                                   "</tr>" ); 
-                                $( this ).dialog( "close" );
+                           if ( bValid ) {
+                               var string = 'lname='+ lname.val()+'&fname='+ fname.val()+'&email='+email.val()+'&isMember='+isMember.val()+'&emaillist='+ emailList.val();
+                            
+                               $.ajax({
+    type: "POST",
+    url: "UserRegisteration.php",
+    data: string,
+    dataType: 'json',
+    context: $(this),
+    cache: false,
+    success: function(returnData){
+        if(returnData.error === false) {
+            $( this ).dialog( "close" );
+            } else {
+                  alert("Error: "+returnData.msg);
+            }
+    }   
+});
 
                             }
+
 
                         },
                        Cancel: function() {
@@ -432,25 +452,20 @@ ob_start();
                 $( "#create-user" )
                .button()
                 .click(function() {
-                    $( "#dialog-form" ).dialog( "open" );
+                    $( "#RegisterDialog" ).dialog( "open" );
                });
            });
 
-
-
-        </script>
-        <script>
-
-
-
+//For popup dialogs for register and forgot passowords.
             $(function() {
                // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
                 $( "#dialog:ui-dialog" ).dialog( "destroy" );
-
-               var name = $( "#name" ),
-               email = $( "#email" ),
-               password = $( "#password" ),
-               allFields = $( [] ).add( name ).add( email ).add( password ),
+                
+				var name = $( "#name" ),
+                email = $( "#email" ),
+                password = $( "#password" ),
+				allFields = $( [] ).add( name ).add( email ).add( password ),
+				 
                tips = $( ".validateTips" );
                function updateTips( t ) {
                    tips
@@ -484,7 +499,7 @@ ob_start();
                    }
               }
 
-              $( "#dialog-form1" ).dialog({
+              $( "#ForgotPasswordDialog" ).dialog({
                   autoOpen: false,
                   height: 300,
                   width: 350,
@@ -523,7 +538,7 @@ ob_start();
                 $( "#forgotpass" )
                 .button()
                 .click(function() {
-                    $( "#dialog-form1" ).dialog( "open" );
+                    $( "#ForgotPasswordDialog" ).dialog( "open" );
 			
                 });
             });
@@ -536,15 +551,14 @@ ob_start();
     </head>
 
     <body>
-        <div id="main">
+        <div id="main">  
             <div id="contentbg">
+                
         <form id="login" method="post" action="login.php"> 
             <h1>Log in to your <strong>Abune Teklehymanot Church</strong> account!</h1>
-            <p class="register">Not a member? <a href="#" id="create-user">Register here!</a></p>
-            <?php if (isset($sErrorText) <> '') { ?>
-		<span style="color:red;" id="PasswordError" align="center"><?php echo $sErrorText; ?></span>
-		<?php } ?>
-            <div>
+            <p class="register">Not a member? <a href="register/index.php" id="create-user" class="registerNow">Register here!</a></p>
+            		<span style="color:red;" id="PasswordError" align="center"></span>
+		            <div>
                 <label for="login_username">Username</label> 
                 <input type="text" name="username" id="login_username" class="field required" title="Please provide your username" />
             </div>			
@@ -552,7 +566,7 @@ ob_start();
                 <label for="login_password">Password</label>
                 <input type="password" name="password" id="login_password" class="field required" title="Password is required" />
             </div>			
-            <p class="forgot"><a href="#" id="forgotpass">Forgot your password?</a></p>
+            <p class="forgot"><a href="#" id="forgotpass" class="registerNow">Forgot your password?</a></p>
             <div class="submit">
                 <button type="submit">Log in</button>   
                 <label>
@@ -561,22 +575,26 @@ ob_start();
                 </label>   
             </div>
         </form>	
-        <div id="dialog-form" title="Create new user">
-            <p class="validateTips">Please complete the following form and we will send you access information. <p/>
+        <div id="RegisterDialog" title="Register for Abune Aregawi we Abune TekleHymanot EOTC">
+            <p class="validateTips">Please complete the following Info and we will send your access information. <p/>
             All form fields are required.</p>
-            <form>
+            <form method="post" action="UserRegistration.php" name="Register">
                 <fieldset>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" class="text ui-widget-content ui-corner-all" />
+                    <label for="fname">Last Name</label>
+                    <input type="text" name="lname" id="lname" class="text ui-widget-content ui-corner-all" />
+                    
                     <label for="email">Email</label>
-
                     <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="member">Are you a member of our church?</label>
+                    <input type="checkbox" name="isMember" id="isMember" value="" class="checkbox ui-widget-content ui-corner-all" />
+                <input type="hidden" name="emaillist" id="emaillist"value="webmaster@debretsehay.org">
+
                 </fieldset>
             </form>
         </div>
-        <div id="dialog-form1" title="Forgote Password">
+        <div id="ForgotPasswordDialog" title="Forgote Password">
             <p class="validateTips">Please Enter Valid Email</p>
             <form>
 
@@ -587,9 +605,10 @@ ob_start();
             </form>
         </div>
             </div>
-        </div>
+     
+    </div>
     </body>
-</html>
+</html> 
 <?php
 // Turn OFF output buffering
 ob_end_flush();

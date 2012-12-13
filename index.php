@@ -11,13 +11,31 @@
         <link rel="icon" href="images/icon.ico" />
         <script type="text/javascript" src="js/font.js"></script>
 <script type="text/javascript">
-            // Usage
+    var os = (function() {
+    var ua = navigator.userAgent.toLowerCase();
+    return {
+        isWin2K: /windows nt 5.0/.test(ua),
+        isXP: /windows nt 5.1/.test(ua),
+        isVista: /windows nt 6.0/.test(ua),
+        isWin7: /windows nt 6.1/.test(ua)
+    };
+}());
+
+
+            
 window.onload = function() {
+    var found = false;
+    //if win7 or vista do assume the amharic font exists.
+    if(os.isWin7 || os.isVista) {
+        found = true;
+      return;
+      
+    }
     var knownEthiopicFonts=new Array("Ethiopia Jiret","Ethiopic WashRa Bold","Ethiopic Wookianos",
 "Ethiopic Yebse", "Visual Geez Unicode");  //For some reason, this always return true "Ge'ez 1",
    var detective = new Detector();
     var ethiopicSize = knownEthiopicFonts.length;
-    var found = false;
+    
     for(var i=0; i < ethiopicSize; i++){
      if(detective.detect(knownEthiopicFonts[i])){
          found = true;

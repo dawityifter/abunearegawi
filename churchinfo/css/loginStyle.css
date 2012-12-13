@@ -309,7 +309,7 @@ color:#000;
 
 
 
-                background:#c4f0f1;		
+            /*    background:#c4f0f1;	*/	
 
 
 
@@ -456,7 +456,7 @@ color:#000;
             }
             #register
 	{
-		width:130px;
+		/*width:130px;
 		height:29px;
 		float:left;
 		margin:0px;
@@ -467,11 +467,11 @@ color:#000;
 		color:#464646;
 		text-align:center;
 		text-decoration:none;
-		text-transform:uppercase;
+		text-transform:uppercase;*/
 	}
 .register
 	{
-		height:23px;
+		 /*height:23px;
 		float:left;
 		margin:0px;
 		padding:6px 0 0 13px;
@@ -482,13 +482,14 @@ color:#000;
 		text-decoration:none;
 		text-transform:uppercase;
 		background-image:url(../../images/register.jpg);  
-        /*   width:117px;
-		*/
+          width:117px;
+		
 		background-repeat:no-repeat;
+   */
 	}
 .register:hover
 	{
-	/*	width:117px;   */
+	/*	width:117px;  
 		height:23px;
 		float:left;
 		margin:0px;
@@ -502,7 +503,11 @@ color:#000;
 		text-transform:uppercase;
 		background-image: url(../../images/registerover.jpg);
 		background-repeat:no-repeat;
+                 */
 	}
-            /* //  login form */	
+            /* //  login form */
+            .registerNow
+            { border: 1px solid #448dae; background: #79c9ec 50% 50% repeat-x; font-weight: normal; color: #026890; }
+
         
 

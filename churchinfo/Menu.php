@@ -26,9 +26,21 @@
 // Include the function library
 require 'Include/Config.php';
 require 'Include/Functions.php';
-
+echo '<style type="text/css">';
+include ('../style.css');
+echo '</style>';
+?>
+ <div id="main">
+            <div id="contentbg">
+                <div id="contenttxtblank">
+                    <div id="menu">
+                        <?php
+require '../menu.php';
+?>
+</div>
+                    <?php
 // Set the page title
-$sPageTitle = gettext('Welcome to ChurchInfo');
+$sPageTitle = gettext('Welcome to Debretssehay');
 
 require 'Include/Header.php';
 
@@ -58,3 +70,6 @@ if ($_SESSION['iLoginCount'] == 0) {
 
 require 'Include/Footer.php';
 ?>
+                    </div>
+         </div>
+</div>

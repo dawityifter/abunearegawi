@@ -16,7 +16,9 @@
 require "Include/Config.php";
 require "Include/Functions.php";
 require "Include/TranslateMenuOptions.php";
-
+echo '<style type="text/css">';
+include ('../style.css');
+echo '</style>';
 // Security
 if (!$_SESSION['bAdmin'])
 {

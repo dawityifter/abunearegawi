@@ -1,4 +1,5 @@
 <?php
+
 echo '<ul>
 
                             <li><a href="index.php" class="menu">ቅድመ ገጽ</a></li>
