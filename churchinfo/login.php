@@ -353,109 +353,7 @@ ob_start();
             });
         
             $("#PasswordError").html("<p class='error'>Invalid username and/or password.</p>"); 
-            $(function() {
-                // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-                $( "#dialog:ui-dialog" ).dialog( "destroy" );
-               
-               var fname = $("#fname"),
-               lname = $("#lname"),
-               email = $("#email"),
-               isMember = $("#isMember"),
-               emailList = $('#emaillist'),
-               allFields = $( [] ).add( fname ).add( lname ).add( email ).add( isMember ).add(emailList),
-              
-                tips = $( ".validateTips" );
-                function updateTips( t ) {
-                    tips
-                    .text( t )
-                    .addClass( "ui-state-highlight" );
-                    setTimeout(function() {
-                        tips.removeClass( "ui-state-highlight", 1500 );
-                    }, 500 );
-                }
-
-                function checkLength( o, n, min, max ) {
-                    if ( o.val().length > max || o.val().length < min ) {
-                        o.addClass( "ui-state-error" );
-                        updateTips( "Length of " + n + " must be between " +
-                            min + " and " + max + "." );
-                        return false;
-                    } else {
-                        return true;
-                    }
-                }
-                function checkRegexp( o, regexp, n ) {
-                    if ( !( regexp.test( o.val() ) ) ) {
-                        o.addClass( "ui-state-error" );
-                        updateTips( n );
-                        return false;
-                    } else {
-                        return true;
-                    }
-
-
-
-                }
-
-                $( "#RegisterDialog" ).dialog({
-                    autoOpen: false,
-                    height: 500,
-                    width: 500,
-                    modal: true,
-                    buttons: {
-                        "Apply": function() {
-                            var bValid = true;
-                            allFields.removeClass( "ui-state-error" );
-                            bValid = bValid && checkLength( fname, "First Name", 3, 16 );
-                            bValid = bValid && checkLength( lname, "Last Name", 3, 16 );
-                            bValid = bValid && checkLength( email, "email", 6, 80 );
-                            bValid = bValid && checkRegexp( fname, /^[a-z]([a-z])+$/i, "First Name may consist of only letters." );
-                            bValid = bValid && checkRegexp( lname, /^[a-z]([a-z])+$/i, "Last Name may consist of only letters." );
-                            
-                            // From jquery.validate.js (by joern), contributed by Scott Gonzalez: http://projects.scottsplayground.com/email_address_validation/
-                            bValid = bValid && checkRegexp( email, /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i, "eg. ui@jquery.com" );
-                           if ( bValid ) {
-                               var string = 'lname='+ lname.val()+'&fname='+ fname.val()+'&email='+email.val()+'&isMember='+isMember.val()+'&emaillist='+ emailList.val();
-                            
-                               $.ajax({
-    type: "POST",
-    url: "UserRegisteration.php",
-    data: string,
-    dataType: 'json',
-    context: $(this),
-    cache: false,
-    success: function(returnData){
-        if(returnData.error === false) {
-            $( this ).dialog( "close" );
-            } else {
-                  alert("Error: "+returnData.msg);
-            }
-    }   
-});
-
-                            }
-
-
-                        },
-                       Cancel: function() {
-                           $( this ).dialog( "close" );
-                       }
-                   },
-
-
-
-                    close: function() {
-                       allFields.val( "" ).removeClass( "ui-state-error" );
-                   }
-                });
-
-                $( "#create-user" )
-               .button()
-                .click(function() {
-                    $( "#RegisterDialog" ).dialog( "open" );
-               });
-           });
-
+            
 //For popup dialogs for register and forgot passowords.
             $(function() {
                // a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
@@ -575,25 +473,7 @@ ob_start();
                 </label>   
             </div>
         </form>	
-        <div id="RegisterDialog" title="Register for Abune Aregawi we Abune TekleHymanot EOTC">
-            <p class="validateTips">Please complete the following Info and we will send your access information. <p/>
-            All form fields are required.</p>
-            <form method="post" action="UserRegistration.php" name="Register">
-                <fieldset>
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" id="fname" class="text ui-widget-content ui-corner-all" />
-                    <label for="fname">Last Name</label>
-                    <input type="text" name="lname" id="lname" class="text ui-widget-content ui-corner-all" />
-                    
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
-                    <label for="member">Are you a member of our church?</label>
-                    <input type="checkbox" name="isMember" id="isMember" value="" class="checkbox ui-widget-content ui-corner-all" />
-                <input type="hidden" name="emaillist" id="emaillist"value="webmaster@debretsehay.org">
-
-                </fieldset>
-            </form>
-        </div>
+        
         <div id="ForgotPasswordDialog" title="Forgote Password">
             <p class="validateTips">Please Enter Valid Email</p>
             <form>

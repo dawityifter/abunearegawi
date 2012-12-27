@@ -127,8 +127,8 @@
                             </div>
                             <div id="contentleft">
                                 <div id="topbuttonsblank">
-                                    <div id="register"><a href="#" class="register">ይመዝገቡ</a></div>
-                                    <div id="bookmark"><a href="#" class="bookmark">Bookmark</a></div>
+                                    <!-- <div id="register"><a href="#" class="register">ይመዝገቡ</a></div>
+                                    <div id="bookmark"><a href="#" class="bookmark">Bookmark</a></div> -->
                                 </div>
                                 <div id="callus">
                                     <h3>Call Us<span class="callus">214-333-6666</span></h3>

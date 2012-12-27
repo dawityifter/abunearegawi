@@ -64,7 +64,9 @@ td{
 .input-container{
 	padding:1px;
 }
-
+.dyCheck{
+    width: 25px;
+}
 #div-regForm,.registered{	
 	border:3px solid #eeeeee;
 	padding:15px;

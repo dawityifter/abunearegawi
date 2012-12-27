@@ -18,21 +18,29 @@ You are free to use the following demo code for any purpose you see fit.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Submit an application to Abune Teklehymanot we Abune Aregawi EOTC</title>
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="demo.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
+ <link rel="stylesheet" type="text/css" href="http://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css">
 
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/start/jquery-ui.css">
+
+  <style type="text/css">
+@import url(../../style.css);
+</style>
+        <title>Abune Tekle Hymanot we Abune Aregawi EOTC</title>
 
 </head>
 
 <body>
-
+<div id="main">  
+            <div id="contentbg">
 <div id="div-regForm">
 
 <div class="form-title">Sign Up</div>
-<div class="form-sub-title">It's free and anyone can join</div>
+<div class="form-sub-title">Access Information will be e-mailed to you</div>
 
 <form id="regForm" action="submit.php" method="post">
 
@@ -67,6 +75,10 @@ You are free to use the following demo code for any purpose you see fit.
     
     </td>
   </tr>
+      <tr>
+    <td><label for="isMember">Member of our Church?</label></td>
+    <td><div class="input-container"><input class ="dyCheck" name="isMember" id="isMember" type="checkbox" /></div></td>
+  </tr>
 <!--  <tr>
     <td><label>Birthday:</label></td>
     <td>
@@ -94,6 +106,8 @@ You are free to use the following demo code for any purpose you see fit.
 </div>
 
 </div>
-
+  </div>
+     
+    </div>
 </body>
 </html>

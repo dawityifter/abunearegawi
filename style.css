@@ -1,11 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
-
+html, body{
+	overflow: auto;
+}
 body
 	{
 		margin:0px;
 		padding:0px;
-		background-image:url(images/bg.jpg);
+		background-image:url(/images/bg.jpg);
 		background-repeat:repeat-x;
 		background-color:#bbcd72;
 	}
@@ -16,18 +18,18 @@ h1,h2,h3,h4,h5,h6,span
 	}
 #main
 	{
-		width:904px;
+		width:826px;
 		float:none;
 		margin:0 auto;
 		padding:0px;
 	}
 #contentbg
 	{
-		width:904px;
+		/*width:904px;*/
 		float: left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/contenttxtbg.jpg);
+		background-image:url(/images/contenttxtbg.jpg);
 		background-repeat: repeat-y;
 	}
 #contenttxtblank
@@ -36,7 +38,7 @@ h1,h2,h3,h4,h5,h6,span
 		float: left;
 		margin:0px;
         padding:0 0 40px 38px;
-		background-image:url(images/contentbg.jpg);
+		background-image:url(/images/contentbg.jpg);
 		background-repeat:no-repeat;
 	}
 	#contenttxtblankmap
@@ -45,12 +47,13 @@ h1,h2,h3,h4,h5,h6,span
 		float: left;
 		margin:0px;
         padding:0 0 40px 38px;
-		background-image:url(images/contentbg.jpg);
+		background-image:url(/images/contentbg.jpg);
 		background-repeat:no-repeat;
 	}
 #menu
 	{
-		width:828px;
+	top:30px;	
+            width:828px;
 		height:30px;
 		float: left;
 		margin:0px;
@@ -80,7 +83,7 @@ h1,h2,h3,h4,h5,h6,span
 		float: left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/menusap.jpg);
+		background-image:url(/images/menusap.jpg);
 		background-repeat:no-repeat;
 	}
 #menu ul li a.menu
@@ -110,7 +113,7 @@ h1,h2,h3,h4,h5,h6,span
 		text-align:center;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image:url(images/menuover.jpg);
+		background-image:url(/images/menuover.jpg);
 		background-repeat:no-repeat;
 		background-position:center bottom;
 	}
@@ -179,7 +182,7 @@ font-size:13px;
 		color:#464646;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image: url(images/bookmark.jpg);
+		background-image: url(/images/bookmark.jpg);
 		background-repeat:no-repeat;
 	}
 .bookmark:hover
@@ -196,7 +199,7 @@ font-size:13px;
 		text-align:center;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image: url(images/bookmarkover.jpg);
+		background-image: url(/images/bookmarkover.jpg);
 		background-repeat :no-repeat;
 	}
 #callus
@@ -209,7 +212,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:20px;
 		color:#393939;
-		background-image:url(images/callus.jpg);
+		background-image:url(/images/callus.jpg);
 		background-repeat:no-repeat;
 	}
 #callus h3
@@ -241,7 +244,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:20px;
 		color:#393939;
-		background-image:url(images/callus.jpg);
+		background-image:url(/images/callus.jpg);
 		background-repeat:no-repeat;
 	}
 	#callusmap h3
@@ -265,7 +268,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:30px;
 		color:#13819a;
-		background-image: url(images/leftheading.jpg);
+		background-image: url(/images/leftheading.jpg);
 		background-repeat:no-repeat;
 	}
 	
@@ -279,7 +282,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:30px;
 		color:#13819a;
-		background-image: url(images/leftheading.jpg);
+		background-image: url(/images/leftheading.jpg);
 		background-repeat:no-repeat;
 	}
 #leftheading h2
@@ -357,7 +360,7 @@ font-size:13px;
 		float:left;
 		margin:10px 0 0 0;
 		padding:0px;
-		background-image:url(images/hline.jpg);
+		background-image:url(/images/hline.jpg);
 		background-repeat:repeat-x;
 		background-position:center;
 	}
@@ -375,7 +378,7 @@ font-size:13px;
 		text-align:center;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image: url(images/morebutton.jpg);
+		background-image: url(/images/morebutton.jpg);
 		background-repeat: no-repeat;
 	}
 .more:hover
@@ -392,7 +395,7 @@ font-size:13px;
 		text-align:center;
 		text-decoration:none;
 		text-transform:uppercase;		
-		background-image: url(images/morebutton.jpg);
+		background-image: url(/images/morebutton.jpg);
 		background-repeat: no-repeat;
 	}	
 /*-----------------------------------------------------CONTENTLEFT-------------------------------------------------------------------------------------------------------------END----------*/	
@@ -418,7 +421,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/search.jpg);
+		background-image:url(/images/search.jpg);
 		background-repeat:no-repeat;
 	}
 #searchblank
@@ -468,7 +471,7 @@ font-size:13px;
 		color:#070808;
 		text-align:center;
 		text-decoration:none;
-		background-image:url(images/searchbutton.jpg);
+		background-image:url(/images/searchbutton.jpg);
 		background-repeat:no-repeat;
 	}
 .search:hover
@@ -483,7 +486,7 @@ font-size:13px;
 		color:#070808;
 		text-align:center;
 		text-decoration:none;
-		background-image:url(images/searchbutton.jpg);
+		background-image:url(/images/searchbutton.jpg);
 		background-repeat:no-repeat;
 	}
 #advancesearch
@@ -554,7 +557,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/login.jpg);
+		background-image:url(/images/login.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.login
@@ -564,7 +567,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/login.jpg);
+		background-image:url(/images/login.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.check
@@ -574,7 +577,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/check.jpg);
+		background-image: url(/images/check.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.check:hover
@@ -584,7 +587,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/check.jpg);
+		background-image: url(/images/check.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.chat
@@ -594,7 +597,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/chat.jpg);
+		background-image: url(/images/chat.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.chat:hover
@@ -604,7 +607,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/chat.jpg);
+		background-image: url(/images/chat.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.idea
@@ -614,7 +617,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/idea.jpg);
+		background-image: url(/images/idea.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.idea:hover
@@ -624,7 +627,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/idea.jpg);
+		background-image: url(/images/idea.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.privecy
@@ -634,7 +637,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/privecy.jpg);
+		background-image: url(/images/privecy.jpg);
 		background-repeat:no-repeat;
 	}
 #rightnav ul li a.privecy:hover
@@ -644,7 +647,7 @@ font-size:13px;
 		float:left;
 		margin:0px;
 		padding:0px;
-		background-image: url(images/privecy.jpg);
+		background-image: url(/images/privecy.jpg);
 		background-repeat:no-repeat;
 	}
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/		
@@ -653,9 +656,9 @@ font-size:13px;
 		width:229px;
 		height:41px;
 		float:left;
-		margin:25px 0 0 0;
+		margin:90px 0 0 0;
 		padding:0px;
-		background-image: url(images/morelinksheading.jpg);
+		background-image: url(/images/morelinksheading.jpg);
 		background-repeat:no-repeat;
 	}
 #morelinksheading h5
@@ -689,7 +692,7 @@ font-size:13px;
 		font-size:11px;
 		font-weight:bold;
 		color:#FFF;
-		background-image:url(images/datebg.jpg);
+		background-image:url(/images/datebg.jpg);
 		background-repeat:no-repeat;
 	}
 .linkblank
@@ -702,7 +705,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:11px;
 		color:#FFF;
-		background-image: url(images/arrow.jpg);
+		background-image: url(/images/arrow.jpg);
 		background-repeat:no-repeat;
 		background-position:left 5px;
 	}
@@ -716,7 +719,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:11px;
 		color:#FFF;
-		background-image: url(images/arrow.jpg);
+		background-image: url(/images/arrow.jpg);
 		background-repeat:no-repeat;
 		background-position:left 5px;
 	}
@@ -730,7 +733,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:11px;
 		color:#FFF;
-		background-image: url(images/arrow.jpg);
+		background-image: url(/images/arrow.jpg);
 		background-repeat:no-repeat;
 		background-position:left 5px;
 	}
@@ -744,7 +747,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:11px;
 		color:#FFF;
-		background-image: url(images/arrow.jpg);
+		background-image: url(/images/arrow.jpg);
 		background-repeat:no-repeat;
 		background-position:left 5px;
 	}
@@ -780,7 +783,7 @@ font-size:13px;
 		margin:0px;
 		padding:0px;
 		overflow:hidden;
-		background-image: url(images/morelinksbot.jpg);
+		background-image: url(/images/morelinksbot.jpg);
 		background-repeat:no-repeat;
 	}
 /*--------------------------------------------------------------RIGHTPART------------------------------------------------------------------------------------------------------END----------*/
@@ -791,7 +794,7 @@ font-size:13px;
 		float:left;
 		margin:36px 0 0 0;
 		padding:0px;
-		background-image:url(images/testmonialbg.jpg);
+		background-image:url(/images/testmonialbg.jpg);
 		background-repeat:no-repeat;
 	}
 #testimonialtxtblank
@@ -812,7 +815,7 @@ font-size:13px;
 		font-family:Arial;
 		font-size:30px;
 		color:#33b0cd;
-		background-image:url(images/testimonial.jpg);
+		background-image:url(/images/testimonial.jpg);
 		background-repeat:no-repeat;
 	}
 #testimonialheading h2
@@ -838,7 +841,7 @@ font-size:13px;
 		font-weight:bold;
 		color:#829241;
 		text-align:center;
-		background-image: url(images/testimonial-date.jpg);
+		background-image: url(/images/testimonial-date.jpg);
 		background-repeat:no-repeat;
 	}
 #testimonialtxt
@@ -886,7 +889,7 @@ font-size:13px;
 		color:#2e2e2e;
 		text-align:center;
 		text-decoration:none;
-		background-image:url(images/detailsbutton.jpg);
+		background-image:url(/images/detailsbutton.jpg);
 		background-repeat:no-repeat;
 	}
 .testimonialbutton:hover
@@ -902,7 +905,7 @@ font-size:13px;
 		color:#2e2e2e;
 		text-align:center;
 		text-decoration:none;
-		background-image: url(images/detailsbuttonover.jpg);
+		background-image: url(/images/detailsbuttonover.jpg);
 		background-repeat:no-repeat;
 	}
 /*------------------------------------------------------------------CONTENTPART-------------------------------------------------------------------------------------END---------------------*/	
@@ -913,7 +916,7 @@ font-size:13px;
 		float: left;
 		margin:0px;
 		padding:0px;
-		background-image:url(images/footerbg.jpg);
+		background-image:url(/images/footerbg.jpg);
 		background-repeat:no-repeat;
 	}
 #footerlinks
@@ -982,7 +985,7 @@ font-size:13px;
 		color:#414141;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image: url(images/xhtml.jpg);
+		background-image: url(/images/xhtml.jpg);
 		background-repeat: no-repeat;
 	}
 .xhtml:hover
@@ -998,7 +1001,7 @@ font-size:13px;
 		color:#414141;
 		text-decoration:none;
 		text-transform:uppercase;		
-		background-image: url(images/xhtml.jpg);
+		background-image: url(/images/xhtml.jpg);
 		background-repeat: no-repeat;
 	}	
 .css
@@ -1014,7 +1017,7 @@ font-size:13px;
 		color:#414141;
 		text-decoration:none;
 		text-transform:uppercase;
-		background-image: url(images/css.jpg);
+		background-image: url(/images/css.jpg);
 		background-repeat: no-repeat;
 	}
 .css:hover
@@ -1030,7 +1033,7 @@ font-size:13px;
 		color:#414141;
 		text-decoration:none;
 		text-transform:uppercase;		
-		background-image: url(images/css.jpg);
+		background-image: url(/images/css.jpg);
 		background-repeat: no-repeat;
 	}	
 #designedby
@@ -1070,7 +1073,7 @@ font-size:13px;
     margin-right: auto;  
     width: 100%;  
     height: 135px;  
-    background: #3f3f3f url(images/cross.jpg) no-repeat center ;  
+    background: #3f3f3f url(/images/cross.jpg) no-repeat center ;  
     position: relative;  
     border-bottom: 1px solid #4a4a4a;  
 } 
@@ -1102,7 +1105,7 @@ font-size:13px;
     margin-left: auto;
     margin-right: auto;
 }
-#panel {
+/*#panel {
     width: 230px;
     position: relative;
     top: 1px;
@@ -1112,7 +1115,7 @@ font-size:13px;
     z-index: 10;
     overflow: hidden;
     text-align: left;
-}
+}*/
 #panel_contents {
     background: black;
     filter:alpha(opacity=70);
@@ -1132,7 +1135,7 @@ font-size:13px;
         top: 1px;  
         width: 173px;  
         height: 54px;  
-        background: url(images/login.jpg);  
+        background: url(/images/login.jpg);  
         z-index: 20;  
         filter:alpha(opacity=70);  
         -moz-opacity:0.70;  
@@ -1203,3 +1206,29 @@ font-size:13px;
         top: 30px;  
         left: 86px;  
     }  
+#paypalLogo{
+	width: 220px;
+	margin-bottom: 5px;
+	border: 0;
+	background: url(donation_center/paypal.jpg) no-repeat;
+	 z-index: 20;  
+     cursor: pointer;  
+}
+#abuneAregawi{
+	position:absolute;
+	top:65px;
+	right: 0px;
+	width:165px;
+	height:1200px;
+	background: url(/images/abuneAregawi.jpg) repeat-y ;
+	/*z-index: 999;*/
+}
+#abuneTekleHaimanot{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:170px;
+	height:1200px;
+	background: url(/images/abuneTekleHaymanot.jpg) repeat-y ;
+	/*z-index: 999;*/
+}
